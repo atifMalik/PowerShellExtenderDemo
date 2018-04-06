@@ -9,9 +9,9 @@ using AtifMalik.Dev.PSExt.Shared.Data;
 namespace AtifMalik.Dev.PSExt.PowershellExtender.UnderstoodCommands
 {
     [Cmdlet(VerbsData.Initialize, "BitBucketRepo")]
-    public class InitializeBitBucketRepo : DevSetupCommandBase
+    public class InitializeGitGubRepo : DevSetupCommandBase
     {
-        public InitializeBitBucketRepo()
+        public InitializeGitGubRepo()
         {
             CommandResults = new List<DevSetupCommandResult>();
         }
@@ -47,7 +47,7 @@ namespace AtifMalik.Dev.PSExt.PowershellExtender.UnderstoodCommands
 
             var creds = Base64Encode(String.Format("{0}:{1}", UserName, Password));
 
-            var url = String.Concat(BitBucketRepoUrl, @"/get/tip.zip");
+            var url = String.Concat(GitHubRepoUrl, @"/get/tip.zip");
 
             string zipFilePath = Path.Combine(Path.GetTempPath(), "test.zip");
 
@@ -84,6 +84,6 @@ namespace AtifMalik.Dev.PSExt.PowershellExtender.UnderstoodCommands
         
         [Parameter(Mandatory = true)]
         [ValidateNotNullOrEmpty]
-        public string BitBucketRepoUrl { get; set; }
+        public string GitHubRepoUrl { get; set; }
     }
 }

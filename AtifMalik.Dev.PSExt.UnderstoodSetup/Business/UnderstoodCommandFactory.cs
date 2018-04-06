@@ -13,42 +13,12 @@ namespace AtifMalik.Dev.PSExt.UnderstoodSetup.Business
 
             List<IDevSetupCommand> commands = new List<IDevSetupCommand>()
             {
-                // new AddAppPool() { AppPoolName = config.NewAppPoolName }
-                // new AddIISSite() { SiteName = config.IIS_SiteName, PhysicalPath = config.IISDirectoryPath, AppPoolName = config.NewAppPoolName }
-
-                // following needs to be tested on fresh IIS Install
-                // new AddUrlRewriteModule()
-                // new InstallRuby() { DownloadFilename = config.RubyInstallerFilename, DownloadUrl = config.RubyDownloadURL  }
-                // new InstallFrontEndLibraries()
-                //new InitializeBitBucketRepo() {
-                //            BitBucketRepoUrl = config.BitBucketRepoPath,
-                //            UserName = "amalik@rightpoint.com",
-                //            Password = "",
-                //            PhysicalPath = @"c:\Temp\"
-                //}
+                //new AddAppPool() { AppPoolName = config.NewAppPoolName },
+                //new AddIISSite() { SiteName = config.IIS_SiteName, PhysicalPath = config.IISDirectoryPath, AppPoolName = config.NewAppPoolName },
+                new InitializeGitGubRepo() { UserName = config.GitUsername, Password = config.GitPassword, GitHubRepoUrl = config.GitHubRepoUrl, PhysicalPath = config.GitRepoFolderHdd }
             };
 
             return commands;
-        }
-    }
-
-    public class UnderstoodCommandFactory_Demo : IDevSetupCommandFactory
-    {
-        public List<IDevSetupCommand> CreateAllCommands()
-        {
-            var config = UnderstoodConfigManager.Instance;
-
-            return new List<IDevSetupCommand>()
-            {
-                new AddAppPool() { AppPoolName = config.NewAppPoolName },
-                // new AddAppPool(),
-                // new AddIISSite()
-                new AddIISSite() { SiteName = config.IIS_SiteName + "_test", PhysicalPath = config.IISDirectoryPath, AppPoolName = config.NewAppPoolName }
-                // new AddIISSite()
-                //new InitializeBitBucketRepo()
-                // new InstallRuby()
-                // new InstallRuby() { DownloadFilename = config.RubyInstallerFilename, DownloadUrl = config.RubyDownloadURL }
-            };
         }
     }
 }

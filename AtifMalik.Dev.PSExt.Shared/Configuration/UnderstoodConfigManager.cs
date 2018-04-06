@@ -31,7 +31,6 @@ namespace AtifMalik.Dev.PSExt.Shared.Configuration
                         _instance.IIS_SiteName = "understood.org.local";
                         _instance.NewAppPoolName = "UnderstoodOrgLocalAppPool";
                         _instance.IISDirectoryPath = @"C:\inetpub\wwwroot\Poses\Understood.org\local\Website";
-                        _instance.BitBucketRepoPath = @"https://bitbucket.org/agency-oasis/understood.org/branch/develop";
                     }
 
                     return _instance;
@@ -44,9 +43,10 @@ namespace AtifMalik.Dev.PSExt.Shared.Configuration
         public string MetabaseIISRootPath { get; private set; }
         public string RubyDownloadUrl { get; private set; }
         public string RubyInstallerFilename { get; private set; }
-        public string BitBucketRepoPath { get; private set; }
+        
         public string NewAppPoolName { get; private set; }
 
+        public string GitHubRepoUrl { get; set; }
         public string GitUsername { get; set; }
         public string GitPassword { get; set; }
         public string GitRepoFolderHdd { get; set; }

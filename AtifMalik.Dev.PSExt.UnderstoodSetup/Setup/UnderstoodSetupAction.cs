@@ -2,8 +2,10 @@
 using System.Collections;
 using System.ComponentModel;
 using System.Configuration.Install;
+using System.Diagnostics;
 using System.IO;
 using System.Text;
+using System.Windows.Forms;
 using AtifMalik.Dev.PSExt.Shared.Configuration;
 using AtifMalik.Dev.PSExt.UnderstoodSetup.Business;
 
@@ -21,18 +23,19 @@ namespace AtifMalik.Dev.PSExt.UnderstoodSetup.Setup
         {
             base.Install(stateSaver);
 
-//#if DEBUG
-//            int processId = Process.GetCurrentProcess().Id;
-//            string message = string.Format("Please attach the debugger (elevated on Vista or Win 7) to process [{0}].", processId);
-//            MessageBox.Show(message, "Debug");
-//#endif
+#if DEBUG
+            int processId = Process.GetCurrentProcess().Id;
+            string message = string.Format("Please attach the debugger (elevated on Vista or Win 7) to process [{0}].", processId);
+            MessageBox.Show(message, "Debug");
+#endif
             
 
             UnderstoodConfigManager.Instance.GitUsername = Context.Parameters["GitUserName"];
             UnderstoodConfigManager.Instance.GitPassword = Context.Parameters["GitPwd"];
-            UnderstoodConfigManager.Instance.GitRepoFolderHdd = Context.Parameters["RepoFolderHdd"];
+            UnderstoodConfigManager.Instance.GitHubRepoUrl = Context.Parameters["GitRepoURL"];
+            UnderstoodConfigManager.Instance.GitRepoFolderHdd = Path.Combine(Context.Parameters["TargetDir"], "Source Code");
 
-            var commands = new UnderstoodCommandFactory_Demo().CreateAllCommands();
+            var commands = new UnderstoodCommandFactory().CreateAllCommands();
             var results = new UnderstoodCommandExecutor().ExecuteCommands(commands);
 
             var sbLogContents = new StringBuilder();
@@ -44,7 +47,7 @@ namespace AtifMalik.Dev.PSExt.UnderstoodSetup.Setup
             }
 
 
-            var logFilePath = Path.Combine(Context.Parameters["TargetDir"], "Understood_Install.log");
+            var logFilePath = Path.Combine(Context.Parameters["TargetDir"], "Setup_Install.log");
 
             using (var streamWriter = new StreamWriter(logFilePath))
             {

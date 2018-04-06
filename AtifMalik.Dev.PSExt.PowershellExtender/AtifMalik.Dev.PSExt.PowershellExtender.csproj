@@ -94,7 +94,7 @@
     <Compile Include="UnderstoodCommands\AddAppPool.cs" />
     <Compile Include="UnderstoodCommands\AddIISSite.cs" />
     <Compile Include="UnderstoodCommands\AddUrlRewriteModule.cs" />
-    <Compile Include="UnderstoodCommands\InitializeBitBucketRepo.cs" />
+    <Compile Include="UnderstoodCommands\InitializeGitGubRepo.cs" />
     <Compile Include="UnderstoodCommands\InstallFrontEndLibraries.cs" />
     <Compile Include="UnderstoodCommands\InstallGemBreakpoint.cs" />
     <Compile Include="UnderstoodCommands\InstallGemCompass.cs" />

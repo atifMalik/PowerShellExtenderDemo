@@ -29,7 +29,7 @@ namespace AtifMalik.Dev.PSExt.UnderstoodSetupTester
 
             var cmd = new AddAppPool();
 
-            UnderstoodCommandFactory_Demo factory = new UnderstoodCommandFactory_Demo();
+            UnderstoodCommandFactory factory = new UnderstoodCommandFactory();
             var commands = factory.CreateAllCommands();
 
             var executor = new UnderstoodCommandExecutor();
