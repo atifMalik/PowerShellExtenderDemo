@@ -29,7 +29,6 @@ namespace AtifMalik.Dev.PSExt.UnderstoodSetup.Setup
             MessageBox.Show(message, "Debug");
 #endif
             
-
             UnderstoodConfigManager.Instance.GitUsername = Context.Parameters["GitUserName"];
             UnderstoodConfigManager.Instance.GitPassword = Context.Parameters["GitPwd"];
             UnderstoodConfigManager.Instance.GitHubRepoUrl = Context.Parameters["GitRepoURL"];

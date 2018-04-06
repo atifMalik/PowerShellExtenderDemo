@@ -519,6 +519,13 @@
         }
         "LaunchCondition"
         {
+            "{836E08B8-0285-4809-BA42-01DB6754A45D}:_CB0791831F894E2E9C563363A75A6578"
+            {
+            "Name" = "8:IIS Present"
+            "Condition" = "8:IISMAJORVERSION >= \"#7\""
+            "Message" = "8:IIS Version 7 or higher needs to be present on this machine. Please install IIS and re-run this setup."
+            "InstallUrl" = "8:"
+            }
         }
         "Locator"
         {
@@ -533,7 +540,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:DevOps Setup Process"
         "ProductCode" = "8:{F6C2B5A5-632C-446B-9E0D-49312E90AB21}"
-        "PackageCode" = "8:{B2CA0135-ED81-4145-8435-7C3DDB580C03}"
+        "PackageCode" = "8:{D2D47168-5826-4D8C-8A9E-9B47ABA54C23}"
         "UpgradeCode" = "8:{808EE779-0FF8-4BBB-94C4-76DFB72F44CA}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
