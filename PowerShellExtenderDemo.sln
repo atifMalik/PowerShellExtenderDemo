@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtifMalik.Dev.PSExt.PowershellExtender", "AtifMalik.Dev.PSExt.PowershellExtender\AtifMalik.Dev.PSExt.PowershellExtender.csproj", "{6249ED1C-85B1-4780-BDC1-D502281711E0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSExt.PowershellExtender", "PSExt.PowershellExtender\PSExt.PowershellExtender.csproj", "{6249ED1C-85B1-4780-BDC1-D502281711E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtifMalik.Dev.PSExt.UnderstoodSetupTester", "AtifMalik.Dev.PSExt.UnderstoodSetupTester\AtifMalik.Dev.PSExt.UnderstoodSetupTester.csproj", "{644BE0AA-BD22-47BA-9137-C0DEBC1B6F1E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSExt.UnderstoodSetupTester", "PSExt.UnderstoodSetupTester\PSExt.UnderstoodSetupTester.csproj", "{644BE0AA-BD22-47BA-9137-C0DEBC1B6F1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtifMalik.Dev.PSExt.PowershellExtenderTests", "AtifMalik.Dev.PSExt.PowershellExtenderTests\AtifMalik.Dev.PSExt.PowershellExtenderTests.csproj", "{03C8164F-B1C2-4F15-AA5C-1C578100B560}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSExt.PowershellExtenderTests", "PSExt.PowershellExtenderTests\PSExt.PowershellExtenderTests.csproj", "{03C8164F-B1C2-4F15-AA5C-1C578100B560}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtifMalik.Dev.PSExt.Shared", "AtifMalik.Dev.PSExt.Shared\AtifMalik.Dev.PSExt.Shared.csproj", "{E154BAEB-DA0B-4DEE-86D9-91F7203B5378}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSExt.Shared", "PSExt.Shared\PSExt.Shared.csproj", "{E154BAEB-DA0B-4DEE-86D9-91F7203B5378}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtifMalik.Dev.PSExt.UnderstoodSetup", "AtifMalik.Dev.PSExt.UnderstoodSetup\AtifMalik.Dev.PSExt.UnderstoodSetup.csproj", "{864EB844-AB9B-4C4C-8A44-CC23E3064FBE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSExt.UnderstoodSetup", "PSExt.UnderstoodSetup\PSExt.UnderstoodSetup.csproj", "{864EB844-AB9B-4C4C-8A44-CC23E3064FBE}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "AtifMalik.Dev.PSExt.UnderstoodSetup.Installer", "AtifMalik.Dev.PSExt.UnderstoodSetup.Installer\AtifMalik.Dev.PSExt.UnderstoodSetup.Installer.vdproj", "{61D05412-C9DF-447B-8D6C-20493B9BDA3C}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "PSExt.UnderstoodSetup.Installer", "PSExt.UnderstoodSetup.Installer\PSExt.UnderstoodSetup.Installer.vdproj", "{61D05412-C9DF-447B-8D6C-20493B9BDA3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
