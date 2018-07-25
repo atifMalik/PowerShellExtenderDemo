@@ -14,9 +14,6 @@ namespace PSExt.PowershellExtender.UnderstoodCommands
     {
         protected override sealed DevSetupCommandResult ExecuteCommand()
         {
-            if (!ValidateParameters())
-                return null;
-
             using (ServerManager serverManager = new ServerManager())
             {
                 // If the physical directory does not exist, create it.

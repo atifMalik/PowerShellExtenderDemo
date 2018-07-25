@@ -13,9 +13,6 @@ namespace PSExt.PowershellExtender.UnderstoodCommands
     {
         protected override sealed DevSetupCommandResult ExecuteCommand()
         {
-            if (!ValidateParameters())
-                return null;
-
             // Create the Directory on file system, if it does not exist
             //var directoryInfo = Directory.CreateDirectory(PhysicalPath);
 

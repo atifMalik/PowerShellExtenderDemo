@@ -34,7 +34,8 @@ namespace PSExt.PowershellExtender
 
             try
             {
-                result = ExecuteCommand();
+                if (ValidateParameters())
+                    result = ExecuteCommand();
             }
             catch (Exception ex)
             {
@@ -43,7 +44,7 @@ namespace PSExt.PowershellExtender
             }
             finally
             {
-                if (result != null)
+                if (result.Message != null)
                     CommandResults.Add(result);
             }
         }

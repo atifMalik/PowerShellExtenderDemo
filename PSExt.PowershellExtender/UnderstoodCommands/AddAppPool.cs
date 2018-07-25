@@ -13,9 +13,6 @@ namespace PSExt.PowershellExtender.UnderstoodCommands
     {
         protected override sealed DevSetupCommandResult ExecuteCommand()
         {
-            if (!ValidateParameters())
-                return null;
-
             using (ServerManager serverManager = new ServerManager())
             {
                 ApplicationPool newPool = serverManager.ApplicationPools.Add(AppPoolName);
