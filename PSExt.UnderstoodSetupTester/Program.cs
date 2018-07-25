@@ -27,7 +27,7 @@ namespace PSExt.UnderstoodSetupTester
             //var results = pipeline.Invoke();
             //pipeline.Dispose();
 
-            var cmd = new AddAppPool();
+            //var cmd = new AddAppPool();
 
             UnderstoodCommandFactory factory = new UnderstoodCommandFactory();
             var commands = factory.CreateAllCommands();

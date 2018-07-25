@@ -13,9 +13,9 @@ namespace PSExt.UnderstoodSetup.Business
 
             List<IDevSetupCommand> commands = new List<IDevSetupCommand>()
             {
-                //new AddAppPool() { AppPoolName = config.NewAppPoolName },
-                //new AddIISSite() { SiteName = config.IIS_SiteName, PhysicalPath = config.IISDirectoryPath, AppPoolName = config.NewAppPoolName },
-                new InitializeGitGubRepo() { UserName = config.GitUsername, Password = config.GitPassword, GitHubRepoUrl = config.GitHubRepoUrl, PhysicalPath = config.GitRepoFolderHdd }
+                new AddAppPool() { AppPoolName = config.NewAppPoolName },
+                new AddIISSite() { SiteName = config.IIS_SiteName, PhysicalPath = config.IISDirectoryPath, AppPoolName = config.NewAppPoolName },
+                //new InitializeGitGubRepo() { UserName = config.GitUsername, Password = config.GitPassword, GitHubRepoUrl = config.GitHubRepoUrl, PhysicalPath = config.GitRepoFolderHdd }
             };
 
             return commands;

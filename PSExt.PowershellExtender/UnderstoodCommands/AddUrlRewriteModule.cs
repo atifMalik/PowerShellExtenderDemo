@@ -8,11 +8,6 @@ namespace PSExt.PowershellExtender.UnderstoodCommands
     [Cmdlet(VerbsCommon.Add, "UrlRewriteModule")]
     public class AddUrlRewriteModule : DevSetupCommandBase
     {
-        public AddUrlRewriteModule()
-        {
-            CommandResults = new List<DevSetupCommandResult>();
-        }
-
         protected override sealed DevSetupCommandResult ExecuteCommand()
         {
             using (ServerManager serverManager = new ServerManager())

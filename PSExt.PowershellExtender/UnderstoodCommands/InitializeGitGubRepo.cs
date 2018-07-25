@@ -11,11 +11,6 @@ namespace PSExt.PowershellExtender.UnderstoodCommands
     [Cmdlet(VerbsData.Initialize, "BitBucketRepo")]
     public class InitializeGitGubRepo : DevSetupCommandBase
     {
-        public InitializeGitGubRepo()
-        {
-            CommandResults = new List<DevSetupCommandResult>();
-        }
-
         protected override sealed DevSetupCommandResult ExecuteCommand()
         {
             if (!ValidateParameters())

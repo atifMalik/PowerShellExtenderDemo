@@ -16,11 +16,6 @@ namespace PSExt.PowershellExtender.UnderstoodCommands
     [Cmdlet(VerbsLifecycle.Install, "Ruby")]
     public class InstallRuby : DevSetupCommandBase
     {
-        public InstallRuby()
-        {
-            CommandResults = new List<DevSetupCommandResult>();
-        }
-
         protected override sealed DevSetupCommandResult ExecuteCommand()
         {
             if (!ValidateParameters())

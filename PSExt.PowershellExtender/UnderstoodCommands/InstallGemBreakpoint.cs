@@ -10,11 +10,6 @@ namespace PSExt.PowershellExtender.UnderstoodCommands
     [Cmdlet(VerbsLifecycle.Install, "GemBreakpoint")]
     public class InstallGemBreakpoint : DevSetupCommandBase
     {
-        public InstallGemBreakpoint()
-        {
-            CommandResults = new List<DevSetupCommandResult>();
-        }
-
         protected override sealed DevSetupCommandResult ExecuteCommand()
         {
             using (PowerShell powerShellInstance = PowerShell.Create())

@@ -12,11 +12,6 @@ namespace PSExt.PowershellExtender.UnderstoodCommands
     [Cmdlet(VerbsCommon.Add, "IISSite")]
     public class AddIISSite : DevSetupCommandBase
     {
-        public AddIISSite()
-        {
-            CommandResults = new List<DevSetupCommandResult>();
-        }
-
         protected override sealed DevSetupCommandResult ExecuteCommand()
         {
             if (!ValidateParameters())

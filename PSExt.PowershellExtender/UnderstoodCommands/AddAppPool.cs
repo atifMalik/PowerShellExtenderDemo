@@ -11,11 +11,6 @@ namespace PSExt.PowershellExtender.UnderstoodCommands
     [Cmdlet(VerbsCommon.Add, "AppPool")]
     public class AddAppPool : DevSetupCommandBase
     {
-        public AddAppPool()
-        {
-            CommandResults = new List<DevSetupCommandResult>();
-        }
-
         protected override sealed DevSetupCommandResult ExecuteCommand()
         {
             if (!ValidateParameters())

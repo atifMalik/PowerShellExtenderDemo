@@ -9,11 +9,6 @@ namespace PSExt.PowershellExtender.UnderstoodCommands
     [Cmdlet(VerbsLifecycle.Install, "FrontEndLibraries")]
     public class InstallFrontEndLibraries : DevSetupCommandBase
     {
-        public InstallFrontEndLibraries()
-        {
-            CommandResults = new List<DevSetupCommandResult>();
-        }
-
         protected override sealed DevSetupCommandResult ExecuteCommand()
         {
             Process process = new Process();

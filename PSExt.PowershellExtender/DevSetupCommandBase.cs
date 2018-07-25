@@ -13,6 +13,11 @@ namespace PSExt.PowershellExtender
     /// </summary>
     public abstract class DevSetupCommandBase : Cmdlet, IDevSetupCommand
     {
+        public DevSetupCommandBase()
+        {
+            CommandResults = new List<DevSetupCommandResult>();
+        }
+
         #region IDevSetupCommand Members
         public virtual int CommandOrder { get; set; }
 
