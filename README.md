@@ -20,8 +20,10 @@ To re-run the (failed) commands individually, the user can open a PowerShell (PS
 This project contains all commands (following the 'Command' design pattern); each command class inherits from __DevSetupCommandBase__ class. The __DevSetupCommandBase__ class inherits from __Cmdlet__ class as well as implements __IDevSetupCommand__ interface.
 
 1. The __IDevSetupCommand__ interface defines __Execute()__ method that allows the MSI installer to execute these commands as C# command objects.
-2. Inheriting from __Cmdlet__ class allows the same command to be executed as a PowerShell command. __ProcessRecord()__ method (overridden from __Cmdlet__ class) gets called, each time the command is executed as a PowerShell command.
-3. __ProcessRecord()__ method calls into __Execute()__ method (see #1 above), thus ensuring that same logic is executed when the command is executed as a PowerShell command.
+2. The __Execute()__ method follows __'Template Method'__ design pattern; this is to avoid duplication of code across command classes.
+3. Inheriting from __Cmdlet__ class allows the same command to be executed as a PowerShell command. __ProcessRecord()__ method (overridden from __Cmdlet__ class) gets called, each time the command is executed as a PowerShell command.
+4. __ProcessRecord()__ method calls into __Execute()__ method (see #1 above), thus ensuring that same logic is executed when the command is executed as a PowerShell command.
+
 
 #### 2. PSExt.PowershellExtenderTests
 This project contains Unit Tests to test the individual commands in Project #1 (above). The unit tests are fairly rudimentary, in the sense that the actual command dependencies were never abstracted away, so no Mocks in this MS Test project.
