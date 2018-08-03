@@ -1,6 +1,6 @@
 # PowerShellExtenderDemo
 
-This solution shows how to extend PowerShell using C# __Cmdlet__ classes in .NET __System.Management.Automation namespace__.
+This solution shows how to extend PowerShell using C# __Cmdlet__ classes in .NET __System.Management.Automation__ namespace.
 
 This is a DevOps solution which includes an MSI Installer project. ("Understood" is the name of a software development project.) The MSI Installer was designed to install/create all dependencies that happen to be pre-requisites for a software developer to commence work on the (Understood) development project. 
 
