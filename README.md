@@ -1,14 +1,14 @@
 # PowerShellExtenderDemo
 
-### This solution shows how to extend PowerShell using C# Cmdlet classes in .NET System.Management.Automation namespace.
+This solution shows how to extend PowerShell using C# Cmdlet classes in .NET System.Management.Automation namespace.
 
-### This is a DevOps solution which includes an MSI Installer project. ("Understood" is the name of a software development project.) The MSI Installer was designed to install/create all dependencies that happen to be pre-requisites for a software developer to commence work on the (Understood) development project. 
+This is a DevOps solution which includes an MSI Installer project. ("Understood" is the name of a software development project.) The MSI Installer was designed to install/create all dependencies that happen to be pre-requisites for a software developer to commence work on the (Understood) development project. 
 
-### The Installer project runs all commands, defined in PowershellExtender project, as part of the installation process. A log file is produced at the termination of MSI install - the file notes commands that passed or failed. The user will then have the ability to re-run the failed commands individually, after remediating the issues mentioned in log file. 
+The Installer project runs all commands, defined in PowershellExtender project, as part of the installation process. A log file is produced at the termination of MSI install - the file notes commands that passed or failed. The user will then have the ability to re-run the failed commands individually, after remediating the issues mentioned in log file. 
 
-### To re-run the (failed) commands individually, the user can open a PowerShell (PS) console, import PowershellExtender (C#) class library as a PowerShell module using the following PS command, and then execute the individual command as a PS command, using the name attribute string defined on the Command classes.
+To re-run the (failed) commands individually, the user can open a PowerShell (PS) console, import PowershellExtender (C#) class library as a PowerShell module using the following PS command, and then execute the individual command as a PS command, using the name attribute string defined on the Command classes.
 
-* -Command "Import-Module .\PowershellExtender.dll""
+* __-Command "Import-Module .\PowershellExtender.dll"__
 
 ### *To facilitate the above-mentioned use cases, the command classes are derived from the following two base constructs*
 * *a custom interface (IDevSetupCommand) that allows the MSI project to execute commands in bulk as C# command objects that follow the simple 'Command' design pattern, and*
