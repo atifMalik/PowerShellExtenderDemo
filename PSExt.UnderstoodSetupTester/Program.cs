@@ -1,6 +1,6 @@
 ﻿using System;
 using PSExt.PowershellExtender.UnderstoodCommands;
-using PSExt.UnderstoodSetup.Business;
+using PSExt.UnderstoodSetup;
 
 namespace PSExt.UnderstoodSetupTester
 {

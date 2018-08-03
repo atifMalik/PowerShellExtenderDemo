@@ -2,7 +2,7 @@
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PSExt.PowershellExtender.UnderstoodCommands;
-using PSExt.Shared.Configuration;
+using PSExt.UnderstoodSetup;
 
 namespace PSExt.PowershellExtenderTests.UnderstoodTests
 {
@@ -22,7 +22,7 @@ namespace PSExt.PowershellExtenderTests.UnderstoodTests
         [TestMethod]
         public void Ruby_Installer_File_Exists()
         {
-            var path = Path.Combine(Path.GetTempPath(), UnderstoodConfigManager.Instance.RubyInstallerFilename);
+            var path = Path.Combine(Path.GetTempPath(), UnderstoodConfigManager.RubyInstallerFilename);
 
             var exists = File.Exists(path);
 

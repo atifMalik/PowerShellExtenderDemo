@@ -1,4 +1,4 @@
-﻿namespace PSExt.UnderstoodSetup.Setup
+﻿namespace PSExt.UnderstoodSetup
 {
     partial class UnderstoodSetupAction
     {

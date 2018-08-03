@@ -81,15 +81,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Business\UnderstoodCommandExecutor.cs" />
-    <Compile Include="Business\UnderstoodCommandFactory.cs" />
+    <Compile Include="UnderstoodCommandExecutor.cs" />
+    <Compile Include="UnderstoodCommandFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Setup\UnderstoodSetupAction.cs">
+    <Compile Include="UnderstoodSetupAction.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Setup\UnderstoodSetupAction.Designer.cs">
+    <Compile Include="UnderstoodSetupAction.Designer.cs">
       <DependentUpon>UnderstoodSetupAction.cs</DependentUpon>
     </Compile>
+    <Compile Include="UnderstoodConfigManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PSExt.Shared\PSExt.Shared.csproj">

@@ -6,10 +6,8 @@ using System.Diagnostics;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
-using PSExt.Shared.Configuration;
-using PSExt.UnderstoodSetup.Business;
 
-namespace PSExt.UnderstoodSetup.Setup
+namespace PSExt.UnderstoodSetup
 {
     [RunInstaller(true)]
     public partial class UnderstoodSetupAction : Installer
@@ -29,10 +27,10 @@ namespace PSExt.UnderstoodSetup.Setup
             MessageBox.Show(message, "Debug");
 #endif
             
-            UnderstoodConfigManager.Instance.GitUsername = Context.Parameters["GitUserName"];
-            UnderstoodConfigManager.Instance.GitPassword = Context.Parameters["GitPwd"];
-            UnderstoodConfigManager.Instance.GitHubRepoUrl = Context.Parameters["GitRepoURL"];
-            UnderstoodConfigManager.Instance.GitRepoFolderHdd = Path.Combine(Context.Parameters["TargetDir"], "Source Code");
+            UnderstoodConfigManager.GitUsername = Context.Parameters["GitUserName"];
+            UnderstoodConfigManager.GitPassword = Context.Parameters["GitPwd"];
+            UnderstoodConfigManager.GitHubRepoUrl = Context.Parameters["GitRepoURL"];
+            UnderstoodConfigManager.GitRepoFolderHdd = Path.Combine(Context.Parameters["TargetDir"], "Source Code");
 
             var commands = new UnderstoodCommandFactory().CreateAllCommands();
             var results = new UnderstoodCommandExecutor().ExecuteCommands(commands);

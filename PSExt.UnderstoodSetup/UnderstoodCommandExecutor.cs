@@ -2,7 +2,7 @@
 using PSExt.Shared.Contracts;
 using PSExt.Shared.Data;
 
-namespace PSExt.UnderstoodSetup.Business
+namespace PSExt.UnderstoodSetup
 {
     public class UnderstoodCommandExecutor : IDevSetupCommandExecutor
     {

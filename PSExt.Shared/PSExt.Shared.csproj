@@ -81,7 +81,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\DevSetupCommandResult.cs" />
-    <Compile Include="Configuration\UnderstoodConfigManager.cs" />
     <Compile Include="Contracts\IDevSetupCommand.cs" />
     <Compile Include="Contracts\IDevSetupCommandExecutor.cs" />
     <Compile Include="Contracts\IDevSetupCommandFactory.cs" />
