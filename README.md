@@ -12,7 +12,7 @@ To re-run the (failed) commands individually, the user can open a PowerShell (PS
 
 ### *To facilitate the above-mentioned use cases, the command classes are derived from the following two base constructs*
 * *a custom interface (__IDevSetupCommand__) that allows the MSI project to execute commands in bulk as C# command objects that follow the simple 'Command' design pattern, and*
-* *__'Cmdlet'__ class defined in __System.Management.Automation namespace__; this allows the same command to be executed individually as a PowerShell command.*
+* *__'Cmdlet'__ class defined in __System.Management.Automation__ namespace; this allows the same command to be executed individually as a PowerShell command.*
 
 ### Following is a brief description for each of the projects in the solution.
 
